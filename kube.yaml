@@ -2,36 +2,36 @@ apiVersion: "v1"
 kind: "Service"
 metadata:
   labels:
-    app: "react-ui"
-  name: "ui"
+    app: "react-ui:5
+  name: "ui:5
 spec:
   ports:
   - name: "http"
     port: 8080
     targetPort: 8080
   selector:
-    app: "react-ui"
+    app: "react-ui:5
   type: "NodePort"
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "react-ui"
+  name: "react-ui:5
   labels:
-    app: react-ui
+    app: react-ui:5
 spec:
   replicas: 1
   selector:
       matchLabels:
-        app: "react-ui"
+        app: "react-ui:5
   template:
     metadata:
       labels:
-        app: react-ui
+        app: react-ui:5
     spec:
       containers:
-        - name: "react-ui"
-          image: "deekshithsn/ui"
+        - name: "react-ui:5
+          image: "deekshithsn/ui:5
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 8080
