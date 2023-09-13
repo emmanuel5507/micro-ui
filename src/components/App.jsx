@@ -7,7 +7,7 @@ const App = () => {
   const [displayData, setDisplayData] = useState({ url: '' });
 
   // Replace the dynamic IP fetch with the static IP address
-  const staticIP = '54.235.34.247';
+  const staticIP = '107.20.4.151';
 
   const handleApiCall = async (e) => {
     let url = `http://${staticIP}:32470/${e.target.name}`;
