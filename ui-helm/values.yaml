@@ -2,7 +2,7 @@
 replicaCount: 1
 
 image:
-  repository: deekshithsn/ui
+  repository: emman777/ui
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
